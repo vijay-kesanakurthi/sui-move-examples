@@ -1,0 +1,15 @@
+image:
+  file: .gitpod.Dockerfile
+
+tasks:
+  - name: Setup SUI
+    init: |
+      rustup update
+      chmod +x ./scripts/install_sui.sh
+      ./scripts/install_sui.sh
+    command: |
+      sui --version
+
+vscode:
+  extensions:
+    - rust-lang.rust-analyzer
