@@ -1,5 +1,7 @@
 FROM gitpod/workspace-full
 
+USER root
+
 # Install system dependencies for building SUI
 RUN apt-get update && apt-get install -y \
     clang \
@@ -12,3 +14,7 @@ RUN apt-get update && apt-get install -y \
     curl \
     git \
     ca-certificates
+
+# Optional: switch back to gitpod user (safer)
+USER gitpod
+
