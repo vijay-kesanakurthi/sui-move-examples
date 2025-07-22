@@ -15,6 +15,8 @@ RUN apt-get update && apt-get install -y \
     git \
     ca-certificates
 
+RUN brew install sui
+
 # Optional: switch back to gitpod user (safer)
 USER gitpod
 
